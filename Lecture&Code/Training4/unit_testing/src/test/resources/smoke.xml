@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="My test suite">
+    <test name="testing">
+        <parameter name="number" value="15"/>
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<exclude name="smoke"/>-->
+                <!--<include name="bvt"/>-->
+            <!--</run>-->
+        <!--</groups>-->
+        <classes>
+            <class name="MyTest"/>
+        </classes>
+    </test>
+</suite>

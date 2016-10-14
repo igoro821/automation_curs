@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="20" started-at="2016-10-13T17:33:34Z" finished-at="2016-10-13T17:33:34Z">
+    <groups>
+      <group name="smoke">
+        <method signature="MyTest.divide()[pri:0, instance:MyTest@77556fd]" name="divide" class="MyTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Command line test" duration-ms="20" started-at="2016-10-13T17:33:34Z" finished-at="2016-10-13T17:33:34Z">
+      <class name="MyTest">
+        <test-method status="PASS" signature="divide()[pri:0, instance:MyTest@77556fd]" name="divide" duration-ms="12" started-at="2016-10-13T20:33:34Z" finished-at="2016-10-13T20:33:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- divide -->
+      </class> <!-- MyTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

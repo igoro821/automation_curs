@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="MyTest" duration-ms="22" started-at="2016-10-13T17:38:40Z" finished-at="2016-10-13T17:38:40Z">
+    <groups>
+      <group name="bvt">
+        <method signature="MyTest.divide()[pri:0, instance:MyTest@19dfb72a]" name="divide" class="MyTest"/>
+        <method signature="MyTest.t2()[pri:0, instance:MyTest@19dfb72a]" name="t2" class="MyTest"/>
+      </group> <!-- bvt -->
+      <group name="smoke">
+        <method signature="MyTest.divide()[pri:0, instance:MyTest@19dfb72a]" name="divide" class="MyTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Command line test" duration-ms="22" started-at="2016-10-13T17:38:40Z" finished-at="2016-10-13T17:38:40Z">
+      <class name="MyTest">
+        <test-method status="PASS" signature="divide()[pri:0, instance:MyTest@19dfb72a]" name="divide" duration-ms="12" started-at="2016-10-13T20:38:40Z" finished-at="2016-10-13T20:38:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- divide -->
+        <test-method status="PASS" signature="t2()[pri:0, instance:MyTest@19dfb72a]" name="t2" duration-ms="0" started-at="2016-10-13T20:38:40Z" finished-at="2016-10-13T20:38:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t2 -->
+      </class> <!-- MyTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- MyTest -->
+</testng-results>
