@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<contact_list>
+<contact>
+<FIO>Bill</FIO>
+<phone>+3752965489</phone>
+<company>epam</company>
+<position>lead</position>
+</contact>
+<contact>
+<FIO>John</FIO>
+<phone>+3752989456</phone>
+<company>itresult</company>
+<position>PM</position>
+</contact>
+<contact>
+<FIO>Vasa</FIO>
+<phone>+3752954612</phone>
+<company>Storm</company>
+<position>QA</position>
+</contact>
+</contact_list>
