@@ -1,17 +1,28 @@
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import testng.BaseTest;
+import ru.yandex.qatools.allure.annotations.Description;
+import ru.yandex.qatools.allure.annotations.Features;
+import ru.yandex.qatools.allure.annotations.Stories;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
+import testng.MyListener;
+import webdriver.BaseTest;
 
 /**
  * Created by tarasenko on 2.11.16.
  */
+@Listeners(MyListener.class)
 public class TestScenarioE3 extends BaseTest {
 
     private static final String ERROR_MESSAGE = "Can't Create account";
 
     @Test
+    @TestCaseId("E3")
+    @Features("Can registry")
+    @Stories("Story 3")
+    @Description("Verify that we can Registry")
     public void registrationTest() {
-        registryNewUserForAuthorizationTest();
+        registryNewUser();
         Assert.assertTrue(newAccountPage.isNewAccountPage(), ERROR_MESSAGE);
     }
 }

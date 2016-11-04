@@ -16,6 +16,7 @@ public class NewAccountPage {
 
     private WebDriver driver;
     private Header header;
+    private AccountPage accountPage;
     private static final String FIRAT_NAME = "Vasy";
     private static final String LAST_NAME = "Ivanov";
     private static final String PASSWORD = "456" + Randomizer.getRandomAppendix();
@@ -28,12 +29,10 @@ public class NewAccountPage {
     private static final String HOME_PHONE = "78-45-" + Randomizer.getRandomAppendix();
     private static final String MOBILE_PHONE = "789-78-" + Randomizer.getRandomAppendix();
     private static final String ALLIAS = "My Allias" + Randomizer.getRandomAppendix();
-    private static final String INFO_ACCOUNT_TEXT= "Welcome to your account. Here you can manage all of your personal information and orders.";
     private static final int STATE_COUNT = 54;
     private static final int MONTH_COUNT = 12;
     private static final int YEAR_COUNT = 116;
     private static final int DAY_COUNT = 28;
-
 
 
     public NewAccountPage(WebDriver driver) {
@@ -42,74 +41,74 @@ public class NewAccountPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy (id = "id_gender1")
-    WebElement mrRadioButton;
+    @FindBy(id = "id_gender1")
+    private WebElement mrRadioButton;
 
-    @FindBy (id = "id_gender2")
-     WebElement mrsRadioButton;
+    @FindBy(id = "id_gender2")
+    private WebElement mrsRadioButton;
 
-    @FindBy (id = "customer_firstname")
-    WebElement customerFirstnameInput;
+    @FindBy(id = "customer_firstname")
+    private WebElement customerFirstnameInput;
 
-    @FindBy (id = "customer_lastname")
-    WebElement customerLastnameInput;
+    @FindBy(id = "customer_lastname")
+    private WebElement customerLastnameInput;
 
-    @FindBy (id = "passwd")
-    WebElement passwordInput;
+    @FindBy(id = "passwd")
+    private WebElement passwordInput;
 
-    @FindBy (id = "days")
-    WebElement daysBirthdaySelector;
+    @FindBy(id = "days")
+    private WebElement daysBirthdaySelector;
 
-    @FindBy (id = "months")
-    WebElement monthsBirthdaySelector;
+    @FindBy(id = "months")
+    private WebElement monthsBirthdaySelector;
 
-    @FindBy (id = "years")
-    WebElement yearsBirthdaySelector;
+    @FindBy(id = "years")
+    private WebElement yearsBirthdaySelector;
 
-    @FindBy (id = "newsletter")
-    WebElement newsLetterCheckBox;
+    @FindBy(id = "newsletter")
+    private WebElement newsLetterCheckBox;
 
-    @FindBy (id = "optin")
-    WebElement newOfferCheckBox;
+    @FindBy(id = "optin")
+    private WebElement newOfferCheckBox;
 
-    @FindBy (id = "company")
-    WebElement companyForAdressInput;
+    @FindBy(id = "company")
+    private WebElement companyForAdressInput;
 
-    @FindBy (id = "address1")
-    WebElement address1LineForAdressInput;
+    @FindBy(id = "address1")
+    private WebElement address1LineForAdressInput;
 
-    @FindBy (id = "address2")
-    WebElement address2LineForAdressInput;
+    @FindBy(id = "address2")
+    private WebElement address2LineForAdressInput;
 
-    @FindBy (id = "city")
-    WebElement cityForAdressInput;
+    @FindBy(id = "city")
+    private WebElement cityForAdressInput;
 
-    @FindBy (id = "id_state")
-    WebElement stateLineForAdressSelector;
+    @FindBy(id = "id_state")
+    private WebElement stateLineForAdressSelector;
 
-    @FindBy (id = "postcode")
-    WebElement postCodeForAdressInput;
+    @FindBy(id = "postcode")
+    private WebElement postCodeForAdressInput;
 
-    @FindBy (id = "other")
-    WebElement additionalInformationForAdressInput;
+    @FindBy(id = "other")
+    private WebElement additionalInformationForAdressInput;
 
-    @FindBy (id = "phone")
-    WebElement phoneHomeAdressInput;
+    @FindBy(id = "phone")
+    private WebElement phoneHomeAdressInput;
 
-    @FindBy (id = "phone_mobile")
-    WebElement phoneMobileForAdressInput;
+    @FindBy(id = "phone_mobile")
+    private WebElement phoneMobileForAdressInput;
 
-    @FindBy (id = "alias")
-    WebElement aliasForAdressInput;
+    @FindBy(id = "alias")
+    private WebElement aliasForAdressInput;
 
-    @FindBy (id = "submitAccount")
-    WebElement submitAccountButton;
+    @FindBy(id = "submitAccount")
+    private WebElement submitAccountButton;
 
-    @FindBy (className = "info-account")
-    WebElement infoAccount;
+    @FindBy(className = "info-account")
+    private WebElement infoAccount;
 
-    public void setDate () {
-        setMailCheckbox ();
+    public void setDate() {
+        setMailCheckbox();
         customerFirstnameInput.sendKeys(FIRAT_NAME);
         customerLastnameInput.sendKeys(LAST_NAME);
         passwordInput.sendKeys(PASSWORD);
@@ -128,28 +127,29 @@ public class NewAccountPage {
         aliasForAdressInput.sendKeys(ALLIAS);
     }
 
-    public void clickSubmitButton () {
+    public void clickSubmitButton() {
         submitAccountButton.click();
+        accountPage = new AccountPage(driver, header);
     }
 
-    private void setState () {
+    private void setState() {
         Select selectState = new Select(stateLineForAdressSelector);
         selectState.selectByIndex(Randomizer.getRandomSelector(STATE_COUNT));
     }
 
-    private void setNewsLetterCheckBox () {
+    private void setNewsLetterCheckBox() {
         if (Randomizer.getRandomBoolean()) {
             newsLetterCheckBox.click();
         }
     }
 
-    private void setNewsOfferCheckBox () {
+    private void setNewsOfferCheckBox() {
         if (Randomizer.getRandomBoolean()) {
             newOfferCheckBox.click();
         }
     }
 
-    private void setMailCheckbox () {
+    private void setMailCheckbox() {
         if (Randomizer.getRandomBoolean()) {
             mrRadioButton.click();
         } else {
@@ -157,7 +157,7 @@ public class NewAccountPage {
         }
     }
 
-    private void setDateOfBirthDay () {
+    private void setDateOfBirthDay() {
         Select selectYear = new Select(yearsBirthdaySelector);
         Select selectMonth = new Select(monthsBirthdaySelector);
         Select selectDay = new Select(daysBirthdaySelector);
@@ -167,6 +167,6 @@ public class NewAccountPage {
     }
 
     public boolean isNewAccountPage() {
-        return WebElementMeneger.isDisplayed(infoAccount) && INFO_ACCOUNT_TEXT.equals(infoAccount.getText());
+        return accountPage.isNewAccountPage();
     }
 }

@@ -27,10 +27,10 @@ public class AuthenticationPage {
     }
 
     @FindBy(id = "email_create")
-    WebElement emailAdressInput;
+    private WebElement emailAdressInput;
 
     @FindBy(id = "SubmitCreate")
-    WebElement submitButton;
+    private WebElement submitButton;
 
     public void setAccountEmail() {
         emailAdressInput.sendKeys(EMAIL_ADRESS);

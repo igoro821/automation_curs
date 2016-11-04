@@ -24,43 +24,42 @@ public class ContactUsPage {
     private static final String FAIL_MESSAGE = "The message cannot be blank.";
 
 
-
     public ContactUsPage(WebDriver driver) {
         this.driver = driver;
-        header = new Header (driver);
+        header = new Header(driver);
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy (id = "id_contact")
-    WebElement headingDropDawn;
+    @FindBy(id = "id_contact")
+    private WebElement headingDropDawn;
 
-    @FindBy (id = "email")
-    WebElement emailInput;
+    @FindBy(id = "email")
+    private WebElement emailInput;
 
-    @FindBy (id = "id_order")
-    WebElement orderReferenceInput;
+    @FindBy(id = "id_order")
+    private WebElement orderReferenceInput;
 
-    @FindBy (id = "fileUpload")
-    WebElement fileUploadInput;
+    @FindBy(id = "fileUpload")
+    private WebElement fileUploadInput;
 
-    @FindBy (id = "message")
-    WebElement messageTextArea;
+    @FindBy(id = "message")
+    private WebElement messageTextArea;
 
-    @FindBy (id = "submitMessage")
-    WebElement submitMessageBatton;
+    @FindBy(id = "submitMessage")
+    private WebElement submitMessageBatton;
 
-    @FindBy (className = "alert-success")
-    WebElement sucsessMassage;
+    @FindBy(className = "alert-success")
+    private WebElement sucsessMassage;
 
-    @FindBy (className = "alert-danger")
-    WebElement failMassage;
+    @FindBy(className = "alert-danger")
+    private WebElement failMassage;
 
     public void enterDataInAllField() {
-        enterDateInFieldExceptMessage ();
+        enterDateInFieldExceptMessage();
         messageTextArea.sendKeys(MESSAGE);
     }
-    
-    public void enterDateInFieldExceptMessage () {
+
+    public void enterDateInFieldExceptMessage() {
         selectField(DROPDAWN_LABEL);
         emailInput.sendKeys(EMAIL);
         orderReferenceInput.sendKeys(ORDER_REFERENCE);
@@ -71,11 +70,11 @@ public class ContactUsPage {
         submitMessageBatton.click();
     }
 
-    public boolean isDislayedSuccessMessage () {
+    public boolean isDislayedSuccessMessage() {
         return WebElementMeneger.isDisplayed(sucsessMassage);
     }
 
-    public boolean isDislayedFailMessageAndMessageCorrect () {
+    public boolean isDislayedFailMessageAndMessageCorrect() {
         if (!WebElementMeneger.isDisplayed(failMassage)) {
             return WebElementMeneger.isDisplayed(failMassage);
         }
@@ -84,12 +83,12 @@ public class ContactUsPage {
         return FAIL_MESSAGE.equals(failMessageText);
     }
 
-    private void selectField (String value){
+    private void selectField(String value) {
         Select select = new Select(headingDropDawn);
         select.selectByVisibleText(value);
     }
 
-    private String getPathForUpload (String pathToFile) {
+    private String getPathForUpload(String pathToFile) {
         return new java.io.File(pathToFile).getAbsolutePath();
 
     }

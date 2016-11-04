@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import page.AccountPage;
 import page.ContactUsPage;
 import page.AuthenticationPage;
 import webdriver.WebElementMeneger;
@@ -20,31 +21,41 @@ public class Header {
 
     private WebDriver driver;
 
+
     public Header(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy (id = "contact-link")
-    WebElement contactUsLink;
+    @FindBy(id = "contact-link")
+    private WebElement contactUsLink;
 
-    @FindBy (className = "login")
-    WebElement sigInLink;
+    @FindBy(className = "login")
+    private WebElement sigInLink;
 
-    @FindBy (id = "search_query_top")
-    WebElement searchInput;
+    @FindBy(id = "search_query_top")
+    private WebElement searchInput;
 
-    @FindBy (name = "submit_search")
-    WebElement runSearchButton;
+    @FindBy(name = "submit_search")
+    private WebElement runSearchButton;
 
-    @FindBy(css ="a[title=\"View my shopping cart\"]")
-    WebElement shoppingCartLink;
+    @FindBy(css = "a[title=\"View my shopping cart\"]")
+    private WebElement shoppingCartLink;
 
     @FindBy(className = "cart_block")
-    WebElement cartBlock;
+    private WebElement cartBlock;
 
     @FindBy(className = "remove_link")
-    WebElement removeLink;
+    private WebElement removeLink;
+
+    @FindBy(css = "a[title=\"T-shirts\"]")
+    private WebElement tShortLink;
+
+    @FindBy(css = "a[title=\"Women\"]")
+    private WebElement womenLink;
+
+    @FindBy(className = "account")
+    private WebElement accountLink;
 
 
     public ContactUsPage clickContactUsLink() {
@@ -68,7 +79,7 @@ public class Header {
 
     public boolean isNotEmptyCard() {
         mouseOverOnCard();
-        return !WebElementMeneger.isDisplayed(cartBlock);
+        return WebElementMeneger.isDisplayed(cartBlock);
     }
 
     public void deleteProductFromCard() {
@@ -86,5 +97,16 @@ public class Header {
     private void mouseOverOnCard() {
         Actions actions = new Actions(driver);
         actions.moveToElement(shoppingCartLink).build().perform();
+    }
+
+    public void clickOnTShortLink() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(womenLink).build().perform();
+        tShortLink.click();
+    }
+
+    public AccountPage clickAccountLink() {
+        accountLink.click();
+        return new AccountPage(driver, this);
     }
 }

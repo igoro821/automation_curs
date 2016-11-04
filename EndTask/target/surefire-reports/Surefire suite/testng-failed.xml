@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="TestScenarioE6">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE6 -->
+      <class name="TestScenarioE2">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE2 -->
+      <class name="TestScenarioE1">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE1 -->
+      <class name="TestScenarioE7">
+        <methods>
+          <include name="setup"/>
+          <include name="tShortExistTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE7 -->
+      <class name="TestScenarioE4">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE4 -->
+      <class name="TestScenarioE5">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE5 -->
+      <class name="TestScenarioE3">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScenarioE3 -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
