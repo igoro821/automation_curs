@@ -1,0 +1,2 @@
+usr1,pass1,true
+usr2,pass4,false

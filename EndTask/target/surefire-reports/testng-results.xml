@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="139292" started-at="2016-11-08T06:50:14Z" finished-at="2016-11-08T06:52:33Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="139292" started-at="2016-11-08T06:50:14Z" finished-at="2016-11-08T06:52:33Z">
+      <class name="TestScenarioE1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE1@54657dd2]" name="setup" is-config="true" duration-ms="13037" started-at="2016-11-08T09:50:14Z" finished-at="2016-11-08T09:50:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="positiveSend()[pri:0, instance:TestScenarioE1@54657dd2]" name="positiveSend" duration-ms="6107" started-at="2016-11-08T09:50:27Z" finished-at="2016-11-08T09:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveSend -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE1@54657dd2]" name="teardown" is-config="true" duration-ms="21" started-at="2016-11-08T09:50:33Z" finished-at="2016-11-08T09:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE1 -->
+      <class name="TestScenarioE2">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE2@27a2a089]" name="setup" is-config="true" duration-ms="10727" started-at="2016-11-08T09:50:33Z" finished-at="2016-11-08T09:50:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="negativeSend()[pri:0, instance:TestScenarioE2@27a2a089]" name="negativeSend" duration-ms="5044" started-at="2016-11-08T09:50:44Z" finished-at="2016-11-08T09:50:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeSend -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE2@27a2a089]" name="teardown" is-config="true" duration-ms="16" started-at="2016-11-08T09:50:49Z" finished-at="2016-11-08T09:50:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE2 -->
+      <class name="TestScenarioE7">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE7@706eab5d]" name="setup" is-config="true" duration-ms="10464" started-at="2016-11-08T09:51:54Z" finished-at="2016-11-08T09:52:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tShortExistTest()[pri:0, instance:TestScenarioE7@706eab5d]" name="tShortExistTest" duration-ms="28528" started-at="2016-11-08T09:52:05Z" finished-at="2016-11-08T09:52:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tShortExistTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE7@706eab5d]" name="teardown" is-config="true" duration-ms="15" started-at="2016-11-08T09:52:33Z" finished-at="2016-11-08T09:52:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE7 -->
+      <class name="TestScenarioE5">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE5@40e60ece]" name="setup" is-config="true" duration-ms="10309" started-at="2016-11-08T09:51:25Z" finished-at="2016-11-08T09:51:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="cardTest()[pri:0, instance:TestScenarioE5@40e60ece]" name="cardTest" duration-ms="6354" started-at="2016-11-08T09:51:35Z" finished-at="2016-11-08T09:51:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cardTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE5@40e60ece]" name="teardown" is-config="true" duration-ms="16" started-at="2016-11-08T09:51:42Z" finished-at="2016-11-08T09:51:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE5 -->
+      <class name="TestScenarioE6">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE6@1ff55ff]" name="setup" is-config="true" duration-ms="9849" started-at="2016-11-08T09:51:42Z" finished-at="2016-11-08T09:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tShortExistTest()[pri:0, instance:TestScenarioE6@1ff55ff]" name="tShortExistTest" duration-ms="2467" started-at="2016-11-08T09:51:52Z" finished-at="2016-11-08T09:51:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tShortExistTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE6@1ff55ff]" name="teardown" is-config="true" duration-ms="38" started-at="2016-11-08T09:51:54Z" finished-at="2016-11-08T09:51:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE6 -->
+      <class name="TestScenarioE3">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE3@3f9270ed]" name="setup" is-config="true" duration-ms="12655" started-at="2016-11-08T09:50:49Z" finished-at="2016-11-08T09:51:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="registrationTest()[pri:0, instance:TestScenarioE3@3f9270ed]" name="registrationTest" duration-ms="12277" started-at="2016-11-08T09:51:02Z" finished-at="2016-11-08T09:51:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE3@3f9270ed]" name="teardown" is-config="true" duration-ms="16" started-at="2016-11-08T09:51:14Z" finished-at="2016-11-08T09:51:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE3 -->
+      <class name="TestScenarioE4">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestScenarioE4@72725ee1]" name="setup" is-config="true" duration-ms="8638" started-at="2016-11-08T09:51:14Z" finished-at="2016-11-08T09:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="searchingTest()[pri:0, instance:TestScenarioE4@72725ee1]" name="searchingTest" duration-ms="2597" started-at="2016-11-08T09:51:22Z" finished-at="2016-11-08T09:51:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestScenarioE4@72725ee1]" name="teardown" is-config="true" duration-ms="6" started-at="2016-11-08T09:51:25Z" finished-at="2016-11-08T09:51:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestScenarioE4 -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
