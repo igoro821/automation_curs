@@ -78,6 +78,8 @@ public class Header {
 
     public boolean isNotEmptyCard() {
         mouseOverOnCard();
+        WebDriverWait wait = Waiter.getWaiter(driver);
+        wait.until(ExpectedConditions.visibilityOf(cartBlock));
         return WebElementMeneger.isDisplayed(cartBlock);
     }
 

@@ -26,7 +26,7 @@ public class Driver {
         }
     }
 
-    //return FF Driver Custom setting for my PC Sorry!
+    //return FF Driver with Custom setting for my PC, Sorry!
     public WebDriver getFfDriver(String url) {
         File pathToBinary = new File("c:\\Program Files (x86)\\Mozilla Firefox38ESR\\firefox.exe");
         FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);

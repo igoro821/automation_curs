@@ -11,8 +11,8 @@
 
 
     <properties>
-        <maven.compiler.target>1.6</maven.compiler.target>
-        <maven.compiler.source>1.6</maven.compiler.source>
+        <!--maven.compiler.target>1.6</maven.compiler.target-->
+        <!--maven.compiler.source>1.6</maven.compiler.source-->
         <allure.version>1.4.6</allure.version>
         <aspectj.version>1.8.4</aspectj.version>
     </properties>
