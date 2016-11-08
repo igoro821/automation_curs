@@ -34,7 +34,9 @@ public class AccountPage {
 
 
     public boolean isNewAccountPage() {
-        return WebElementMeneger.isDisplayed(infoAccount) && INFO_ACCOUNT_TEXT.equals(infoAccount.getText());
+        boolean successMessageIsDisplayed = WebElementMeneger.isDisplayed(infoAccount);
+        boolean textInMessageCorrect = INFO_ACCOUNT_TEXT.equals(infoAccount.getText());
+        return  successMessageIsDisplayed && textInMessageCorrect;
     }
 
     public void clicOnOrderLink() {

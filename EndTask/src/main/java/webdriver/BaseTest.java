@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import page.AuthenticationPage;
 import page.MainPage;
 import page.NewAccountPage;
-import webdriver.Driver;
 
 /**
  * Created by tarasenko on 2.11.16.
@@ -37,7 +36,6 @@ public class BaseTest {
         newAccountPage.setDate();
         newAccountPage.clickSubmitButton();
     }
-
 
     public static WebDriver getDriver() {
         return driver;

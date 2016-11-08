@@ -1,5 +1,6 @@
 package page;
 
+import helper.RandomData;
 import helper.Randomizer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,10 +16,6 @@ public class AuthenticationPage {
     private WebDriver driver;
     private Header header;
     private NewAccountPage newAccountPage;
-    private static final String FIRST_PART_EMAIL = "test";
-    private static final String LASTPART_EMAIL = "@testers.com";
-    private static final String EMAIL_ADRESS = FIRST_PART_EMAIL + Randomizer.getRandomAppendix() + LASTPART_EMAIL;
-
 
     public AuthenticationPage(WebDriver driver) {
         this.driver = driver;
@@ -33,7 +30,7 @@ public class AuthenticationPage {
     private WebElement submitButton;
 
     public void setAccountEmail() {
-        emailAdressInput.sendKeys(EMAIL_ADRESS);
+        emailAdressInput.sendKeys(RandomData.getEmail());
     }
 
     public NewAccountPage clickSubmitButton() {

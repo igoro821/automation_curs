@@ -1,5 +1,6 @@
 package page;
 
+import helper.RandomData;
 import helper.Randomizer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import part.Header;
-import webdriver.WebElementMeneger;
 
 /**
  * Created by tarasenko on 2.11.16.
@@ -17,18 +17,7 @@ public class NewAccountPage {
     private WebDriver driver;
     private Header header;
     private AccountPage accountPage;
-    private static final String FIRAT_NAME = "Vasy";
-    private static final String LAST_NAME = "Ivanov";
-    private static final String PASSWORD = "456" + Randomizer.getRandomAppendix();
-    private static final String COMPANY = "solytion" + Randomizer.getRandomAppendix();
-    private static final String ADRESS = "minsk" + Randomizer.getRandomAppendix();
-    private static final String ADRESS2 = "vitebsk" + Randomizer.getRandomAppendix();
-    private static final String CITY = "Bor" + Randomizer.getRandomAppendix();
-    private static final String POSTAL_CODE = Randomizer.getRandomAppendix();
-    private static final String ADDITIONAL_INFO = "i'm tester" + Randomizer.getRandomAppendix();
-    private static final String HOME_PHONE = "78-45-" + Randomizer.getRandomAppendix();
-    private static final String MOBILE_PHONE = "789-78-" + Randomizer.getRandomAppendix();
-    private static final String ALLIAS = "My Allias" + Randomizer.getRandomAppendix();
+//count label in box
     private static final int STATE_COUNT = 54;
     private static final int MONTH_COUNT = 12;
     private static final int YEAR_COUNT = 116;
@@ -109,22 +98,22 @@ public class NewAccountPage {
 
     public void setDate() {
         setMailCheckbox();
-        customerFirstnameInput.sendKeys(FIRAT_NAME);
-        customerLastnameInput.sendKeys(LAST_NAME);
-        passwordInput.sendKeys(PASSWORD);
+        customerFirstnameInput.sendKeys(RandomData.getFiratName());
+        customerLastnameInput.sendKeys(RandomData.getLastName());
+        passwordInput.sendKeys(RandomData.getPassword());
         setDateOfBirthDay();
         setNewsLetterCheckBox();
         setNewsOfferCheckBox();
-        companyForAdressInput.sendKeys(COMPANY);
-        address1LineForAdressInput.sendKeys(ADRESS);
-        address2LineForAdressInput.sendKeys(ADRESS2);
-        cityForAdressInput.sendKeys(CITY);
+        companyForAdressInput.sendKeys(RandomData.getCompany());
+        address1LineForAdressInput.sendKeys(RandomData.getAress());
+        address2LineForAdressInput.sendKeys(RandomData.getAdress2());
+        cityForAdressInput.sendKeys(RandomData.getCity());
         setState();
-        postCodeForAdressInput.sendKeys(POSTAL_CODE);
-        additionalInformationForAdressInput.sendKeys(ADDITIONAL_INFO);
-        phoneHomeAdressInput.sendKeys(HOME_PHONE);
-        phoneMobileForAdressInput.sendKeys(MOBILE_PHONE);
-        aliasForAdressInput.sendKeys(ALLIAS);
+        postCodeForAdressInput.sendKeys(RandomData.getPostalCode());
+        additionalInformationForAdressInput.sendKeys(RandomData.getAdditionalInfo());
+        phoneHomeAdressInput.sendKeys(RandomData.getHomePhone());
+        phoneMobileForAdressInput.sendKeys(RandomData.getMobilePhone());
+        aliasForAdressInput.sendKeys(RandomData.getAllias());
     }
 
     public void clickSubmitButton() {

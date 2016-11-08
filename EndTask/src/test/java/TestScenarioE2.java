@@ -18,7 +18,7 @@ public class TestScenarioE2 extends BaseTest {
 
     private MainPage mainPage;
     private ContactUsPage contactUsPage;
-    private static final String ERROR_MESSAGE = "Fail Message is not displayed!";
+    private static final String ERROR_MESSAGE = "Fail Message is not displayed or text in message is incorrect!";
 
     @Test
     @TestCaseId("E2")

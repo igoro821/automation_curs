@@ -1,5 +1,7 @@
 package page;
 
+import helper.RandomData;
+import helper.Randomizer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,13 +18,6 @@ public class ContactUsPage {
 
     private WebDriver driver;
     private Header header;
-    private static final String EMAIL = "rapid@test.com";
-    private static final String ORDER_REFERENCE = "789456";
-    private static final String MESSAGE = "Testing!";
-    private static final String DROPDAWN_LABEL = "Customer service";
-    private static final String PATH_TO_FILE = "src\\main\\resources\\sample.txt";
-    private static final String FAIL_MESSAGE = "The message cannot be blank.";
-
 
     public ContactUsPage(WebDriver driver) {
         this.driver = driver;
@@ -56,14 +51,14 @@ public class ContactUsPage {
 
     public void enterDataInAllField() {
         enterDateInFieldExceptMessage();
-        messageTextArea.sendKeys(MESSAGE);
+        messageTextArea.sendKeys(RandomData.getMessage());
     }
 
     public void enterDateInFieldExceptMessage() {
-        selectField(DROPDAWN_LABEL);
-        emailInput.sendKeys(EMAIL);
-        orderReferenceInput.sendKeys(ORDER_REFERENCE);
-        fileUploadInput.sendKeys(getPathForUpload(PATH_TO_FILE));
+        selectField(RandomData.getDropdawnLabel());
+        emailInput.sendKeys(RandomData.getEmail());
+        orderReferenceInput.sendKeys(RandomData.getOrderReference());
+        fileUploadInput.sendKeys(getPathForUpload(RandomData.getPathToFile()));
     }
 
     public void clickSubmit() {
@@ -80,7 +75,8 @@ public class ContactUsPage {
         }
         WebElement failMessageTextNode = failMassage.findElement(By.cssSelector("ol>li"));
         String failMessageText = failMessageTextNode.getText();
-        return FAIL_MESSAGE.equals(failMessageText);
+        String failMessage = RandomData.getFailMessage();
+        return failMessage.equals(failMessageText);
     }
 
     private void selectField(String value) {
@@ -90,6 +86,5 @@ public class ContactUsPage {
 
     private String getPathForUpload(String pathToFile) {
         return new java.io.File(pathToFile).getAbsolutePath();
-
     }
 }

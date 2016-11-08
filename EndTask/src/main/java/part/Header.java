@@ -21,7 +21,6 @@ public class Header {
 
     private WebDriver driver;
 
-
     public Header(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

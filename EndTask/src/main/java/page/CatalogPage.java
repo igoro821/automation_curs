@@ -69,7 +69,9 @@ public class CatalogPage {
     }
 
     private boolean isTShortProduct() {
-        return WebElementMeneger.isDisplayed(paginationOfProduct) && CATEGORY_NAME.equalsIgnoreCase(categoryName.getText());
+        boolean paginationIsDisplayed = WebElementMeneger.isDisplayed(paginationOfProduct);
+        boolean categoryNameIscorrect = CATEGORY_NAME.equalsIgnoreCase(categoryName.getText());
+        return  paginationIsDisplayed && categoryNameIscorrect;
     }
 
     public boolean isTShortExist() {
