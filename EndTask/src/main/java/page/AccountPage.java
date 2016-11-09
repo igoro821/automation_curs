@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import part.Header;
-import webdriver.WebElementMeneger;
+import webdriver.WebElementMenager;
 
 /**
  * Created by tarasenko on 4.11.16.
+ *
+ * Page registered account
  */
 public class AccountPage {
 
@@ -34,7 +36,7 @@ public class AccountPage {
 
 
     public boolean isNewAccountPage() {
-        boolean successMessageIsDisplayed = WebElementMeneger.isDisplayed(infoAccount);
+        boolean successMessageIsDisplayed = WebElementMenager.isDisplayed(infoAccount);
         boolean textInMessageCorrect = INFO_ACCOUNT_TEXT.equals(infoAccount.getText());
         return  successMessageIsDisplayed && textInMessageCorrect;
     }
@@ -44,6 +46,6 @@ public class AccountPage {
     }
 
     public boolean isExistBuy() {
-        return WebElementMeneger.isDisplayed(infoTitle);
+        return WebElementMenager.isDisplayed(infoTitle);
     }
 }

@@ -5,6 +5,8 @@ import java.util.Random;
 
 /**
  * Created by tarasenko on 2.11.16.
+ *
+ * Random algorithm for different field
  */
 public class Randomizer {
 

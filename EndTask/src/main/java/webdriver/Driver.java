@@ -11,6 +11,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by tarasenko on 31.10.16.
+ *
+ * Wrapper class for driver.
+ * Encapsulate the complexity of creating a variety of browsers
  */
 public class Driver {
 

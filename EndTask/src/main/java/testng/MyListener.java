@@ -10,6 +10,8 @@ import webdriver.BaseTest;
 
 /**
  * Created by tarasenko on 4.11.16.
+ *
+ * Listener for report
  */
 public class MyListener implements ITestListener {
     @Override

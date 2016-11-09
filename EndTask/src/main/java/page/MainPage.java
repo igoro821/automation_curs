@@ -6,6 +6,8 @@ import part.Header;
 
 /**
  * Created by tarasenko on 31.10.16.
+ *
+ * First Index page
  */
 public class MainPage {
 

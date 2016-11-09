@@ -1,7 +1,6 @@
 package page;
 
 import helper.RandomData;
-import helper.Randomizer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,10 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import part.Header;
-import webdriver.WebElementMeneger;
+import webdriver.WebElementMenager;
 
 /**
  * Created by tarasenko on 31.10.16.
+ *
+ * Page for contact with admin
  */
 public class ContactUsPage {
 
@@ -66,12 +67,12 @@ public class ContactUsPage {
     }
 
     public boolean isDislayedSuccessMessage() {
-        return WebElementMeneger.isDisplayed(sucsessMassage);
+        return WebElementMenager.isDisplayed(sucsessMassage);
     }
 
     public boolean isDislayedFailMessageAndMessageCorrect() {
-        if (!WebElementMeneger.isDisplayed(failMassage)) {
-            return WebElementMeneger.isDisplayed(failMassage);
+        if (!WebElementMenager.isDisplayed(failMassage)) {
+            return WebElementMenager.isDisplayed(failMassage);
         }
         WebElement failMessageTextNode = failMassage.findElement(By.cssSelector("ol>li"));
         String failMessageText = failMessageTextNode.getText();

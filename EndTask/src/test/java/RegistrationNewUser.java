@@ -12,7 +12,7 @@ import webdriver.BaseTest;
  * Created by tarasenko on 2.11.16.
  */
 @Listeners(MyListener.class)
-public class TestScenarioE3 extends BaseTest {
+public class RegistrationNewUser extends BaseTest {
 
     private static final String ERROR_MESSAGE = "Can't Create account";
 

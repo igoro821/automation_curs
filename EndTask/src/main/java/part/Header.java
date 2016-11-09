@@ -12,10 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import page.AccountPage;
 import page.ContactUsPage;
 import page.AuthenticationPage;
-import webdriver.WebElementMeneger;
+import webdriver.WebElementMenager;
 
 /**
  * Created by tarasenko on 31.10.16.
+ *
+ * Top of the all page
  */
 public class Header {
 
@@ -80,7 +82,7 @@ public class Header {
         mouseOverOnCard();
         WebDriverWait wait = Waiter.getWaiter(driver);
         wait.until(ExpectedConditions.visibilityOf(cartBlock));
-        return WebElementMeneger.isDisplayed(cartBlock);
+        return WebElementMenager.isDisplayed(cartBlock);
     }
 
     public void deleteProductFromCard() {
@@ -92,7 +94,7 @@ public class Header {
 
     public boolean isEmptyCard() {
         mouseOverOnCard();
-        return !WebElementMeneger.isDisplayed(cartBlock);
+        return !WebElementMenager.isDisplayed(cartBlock);
     }
 
     private void mouseOverOnCard() {

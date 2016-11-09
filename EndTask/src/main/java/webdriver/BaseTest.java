@@ -9,6 +9,8 @@ import page.NewAccountPage;
 
 /**
  * Created by tarasenko on 2.11.16.
+ *
+ * General for all Test
  */
 public class BaseTest {
     protected MainPage mainPage;

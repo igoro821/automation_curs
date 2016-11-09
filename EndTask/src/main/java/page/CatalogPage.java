@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import part.Header;
-import webdriver.WebElementMeneger;
+import webdriver.WebElementMenager;
 
 /**
  * Created by tarasenko on 4.11.16.
+ *
+ * Page with product, and step for buy
  */
 public class CatalogPage {
 
@@ -65,11 +67,11 @@ public class CatalogPage {
     }
 
     public boolean isProductExist() {
-        return WebElementMeneger.isDisplayed(paginationOfProduct);
+        return WebElementMenager.isDisplayed(paginationOfProduct);
     }
 
     private boolean isTShortProduct() {
-        boolean paginationIsDisplayed = WebElementMeneger.isDisplayed(paginationOfProduct);
+        boolean paginationIsDisplayed = WebElementMenager.isDisplayed(paginationOfProduct);
         boolean categoryNameIscorrect = CATEGORY_NAME.equalsIgnoreCase(categoryName.getText());
         return  paginationIsDisplayed && categoryNameIscorrect;
     }

@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 
 /**
  * Created by tarasenko on 3.11.16.
+ *
+ * The general class of similar features of all elements
  */
-public class WebElementMeneger {
+public class WebElementMenager {
 
     public static boolean isDisplayed(WebElement webElement) {
         boolean isDisplayed;

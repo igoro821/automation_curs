@@ -11,22 +11,23 @@ import testng.MyListener;
 import webdriver.BaseTest;
 
 /**
- * Created by tarasenko on 4.11.16.
+ * Created by tarasenko on 2.11.16.
  */
 @Listeners(MyListener.class)
-public class TestScenarioE6 extends BaseTest {
+public class SearchProduct extends BaseTest {
 
+    private static final String ERROR_MESSAGE = "Product is not exist";
+    private static final String SEARCHED_PRODUCT = "Blouse";
     private CatalogPage catalogPage;
-    private static final String ERROR_MESSAGE = "Product is not exist, or it's no T-Short";
 
     @Test
-    @TestCaseId("E6")
-    @Features("navigate")
-    @Stories("Story 6")
-    @Description("Verify that we can navigate")
-    public void tShortExistTest() {
+    @TestCaseId("E4")
+    @Features("Check product")
+    @Stories("Story 4")
+    @Description("Verify that we find blouse")
+    public void searchingTest() {
         mainPage = new MainPage(driver);
-        catalogPage = mainPage.clickOnTShortLink();
-        Assert.assertTrue(catalogPage.isTShortExist(), ERROR_MESSAGE);
+        catalogPage = mainPage.searchProduct(SEARCHED_PRODUCT);
+        Assert.assertTrue(catalogPage.isProductExist(), ERROR_MESSAGE);
     }
 }

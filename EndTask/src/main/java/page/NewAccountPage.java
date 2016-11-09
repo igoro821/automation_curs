@@ -11,6 +11,8 @@ import part.Header;
 
 /**
  * Created by tarasenko on 2.11.16.
+ *
+ * Page for registration new page
  */
 public class NewAccountPage {
 

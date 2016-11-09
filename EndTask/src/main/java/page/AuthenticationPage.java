@@ -10,6 +10,8 @@ import part.Header;
 
 /**
  * Created by tarasenko on 2.11.16.
+ *
+ * Page for logging and input-mail address to create a new account
  */
 public class AuthenticationPage {
 

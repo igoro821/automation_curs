@@ -14,7 +14,7 @@ import webdriver.BaseTest;
  * Created by tarasenko on 2.11.16.
  */
 @Listeners(MyListener.class)
-public class TestScenarioE2 extends BaseTest {
+public class NegativeSendFromContactUsPage extends BaseTest {
 
     private MainPage mainPage;
     private ContactUsPage contactUsPage;

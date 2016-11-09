@@ -5,6 +5,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by tarasenko on 3.11.16.
+ *
+ * General class for waiter
  */
 public class Waiter {
 

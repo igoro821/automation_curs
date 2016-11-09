@@ -15,7 +15,7 @@ import webdriver.BaseTest;
  * Created by tarasenko on 4.11.16.
  */
 @Listeners(MyListener.class)
-public class TestScenarioE7 extends BaseTest {
+public class CanByuProduct extends BaseTest {
 
     private static final String ERROR_MESSAGE = "Buy is not exist, sorry";
     private static final String SEARCHED_PRODUCT = "Blouse";

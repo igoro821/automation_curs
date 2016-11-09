@@ -2,11 +2,13 @@ package helper;
 
 /**
  * Created by tarasenko on 8.11.16.
+ *
+ * Creating data for test
  */
 public class RandomData {
 
 
-    //For ALL
+    //For ALL page
     public static String getEmail() {
         return FIRST_PART_EMAIL + Randomizer.getRandomAppendix() + LASTPART_EMAIL;
     }
@@ -26,34 +28,6 @@ public class RandomData {
     private static final String ALLIAS = "My Allias" + Randomizer.getRandomAppendix();
     private static final String FIRST_PART_EMAIL = "test";
     private static final String LASTPART_EMAIL = "@testers.com";
-
-    public static String getOrderReference() {
-        return ORDER_REFERENCE;
-    }
-
-    public static String getMessage() {
-        return MESSAGE;
-    }
-
-    public static String getDropdawnLabel() {
-        return DROPDAWN_LABEL;
-    }
-
-    public static String getPathToFile() {
-        return PATH_TO_FILE;
-    }
-
-    public static String getFailMessage() {
-        return FAIL_MESSAGE;
-    }
-
-
-    //  ContactUsPage
-    private static final String ORDER_REFERENCE = "789456";
-    private static final String MESSAGE = "Testing!";
-    private static final String DROPDAWN_LABEL = "Customer service";
-    private static final String PATH_TO_FILE = "src\\main\\resources\\sample.txt";
-    private static final String FAIL_MESSAGE = "The message cannot be blank.";
 
     public static String getFiratName() {
         return FIRAT_NAME;
@@ -102,4 +76,32 @@ public class RandomData {
     public static String getAllias() {
         return ALLIAS;
     }
+
+    //  ContactUsPage
+    private static final String ORDER_REFERENCE = "789456";
+    private static final String MESSAGE = "Testing!";
+    private static final String DROPDAWN_LABEL = "Customer service";
+    private static final String PATH_TO_FILE = "src\\main\\resources\\sample.txt";
+    private static final String FAIL_MESSAGE = "The message cannot be blank.";
+
+    public static String getOrderReference() {
+        return ORDER_REFERENCE;
+    }
+
+    public static String getMessage() {
+        return MESSAGE;
+    }
+
+    public static String getDropdawnLabel() {
+        return DROPDAWN_LABEL;
+    }
+
+    public static String getPathToFile() {
+        return PATH_TO_FILE;
+    }
+
+    public static String getFailMessage() {
+        return FAIL_MESSAGE;
+    }
+
 }
